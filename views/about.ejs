@@ -1,0 +1,26 @@
+<% include layouts/header.ejs %>
+<body class="amber lighten-5"><br><br>
+    <div class="container">
+        <h4 class="align-center"> FlashMail</h4>
+        <div class="row">
+            <div class="col l12 m12 s12">
+                <p class="flow-text">
+                    Just like a flash, FlashMail is a very fast email service. FlashMail uses the magical Bloom
+                    Filter to detect duplicate email.
+                </p>
+                <p class="flow-text">
+                    Bloom Filters are time and space efficient probabilistic data structure. It is mainly used to
+                    test set membership. Bloom filters test in O(1) time whether an element is in the set or not.
+                    However, there is a catch. Bloom filters give out false positive i.e. sometimes it tells that
+                    an element is in the set even it is not. Hence, the name probabilistic data structure.
+                </p>
+                <p class="flow-text">
+                    Bloom filters are also space efficient. Since, bloom filters use bit vectors to store containership
+                    of elements, it takes very small memory space. Bloom filters can store the containership information
+                    of billions of elements with just a few MB memory space.
+                </p>
+            </div>
+        </div>
+    </div>
+
+<% include layouts/footer.ejs %>

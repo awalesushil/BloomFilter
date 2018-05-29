@@ -1,0 +1,45 @@
+
+<% include layouts/header.ejs %>
+<body class="amber lighten-5"><br>
+<div class="container">
+    <div class="row">
+        <div class="col l3 s4 m4">
+            <h5> Hi, <%= email %>!</h5>
+        </div>
+        <div class="col l2 s2 m2 right">
+            <a href="/dashboard/logout" class="btn red darken-2"> Logout </a>
+        </div>
+    </div>
+    <h4 class="center-align"> All Users </h4>
+    <hr>
+    <div class="row">
+        <div class="col l12 s12 m12">
+            <table class="bordered">
+                <thead>
+                    <th> S. No. </th>
+                    <th> First Name </th>
+                    <th> Last Name </th>
+                    <th> User Name </th>
+                    <th>  Gender </th>
+                    <th> Date of Birth </th>
+                    <th> Phone Number </th>
+                </thead>
+                <tbody>
+                <% i = 1 %>
+                <% users.forEach(function (user) { %>
+                    <tr>
+                        <td> <%= i++ %> </td>
+                        <td> <%= user.first_name %> </td>
+                        <td> <%= user.last_name %> </td>
+                        <td> <%= user.user_name %> </td>
+                        <td> <%= user.gender %> </td>
+                        <td> <%= user.date_of_birth.toDateString() %> </td>
+                        <td> <%= user.phone_number %></td>
+                    </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<% include layouts/footer.ejs %>

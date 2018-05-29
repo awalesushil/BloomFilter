@@ -1,0 +1,27 @@
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('select').material_select();
+    });
+    var d = new Date();
+    d.setFullYear( d.getFullYear() - 100 );
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 100, // Creates a dropdown of 100 years to control year,
+        min: d,
+        max: new Date(),
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false // Close upon selecting a date,
+    });
+</script>
+
+<footer class="page-footer amber lighten-5" style="padding-top: 150px">
+    <div class="footer-copyright red darken-3 white-text">
+        <div class="container">&copy; 2018 FlashMail. By <a href="https://github.com/awalesushil" target="_blank" class="white-text">Awale Sushil</a>
+            <!-- <a class="grey-text text-lighten-2 right" href="#!">Documentation</a> -->
+        </div>
+    </div>
+</footer>
+</body>
+</html>

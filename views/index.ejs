@@ -1,0 +1,177 @@
+
+    <% include layouts/header.ejs %>
+  <body class="amber lighten-5"><br><br>
+
+        <div class="container">
+          <div class="row">
+
+            <!-- Left Div Start -->
+
+                        <div class="col l7 m6 s12"><br><br>
+                            <h6><em><b>Powered by</b></em></h6>
+                            <h1 class="animated bounceInLeft red-text text-darken-3" style="font-size: 6rem; margin-top: -2%;"> Bloom Filter</h1>
+
+                            <em><h5 class="left-align black-text" id="tagline"> </h5></em>
+                        </div>
+
+            <!-- Left Div End -->
+
+            <!-- Right Div Start -->
+
+                        <div class="col m6 l5 s12 right">
+
+                <!-- Form Card Div -->
+                              <div class="card">
+
+                                    <!-- Card Tabs -->
+                                      <div class="card-tabs">
+                                        <ul class="tabs red-text darken-3 tabs-fixed-width">
+                                          <li class="tab"><a href="#login">Login</a></li>
+                                          <li class="tab"><a href="#signUp" class="active">Sign Up</a></li>
+                                        </ul>
+                                      </div>
+
+                                    <!-- Card Tab Ends -->
+
+                                    <!-- Card Content -->
+
+                                  <div class="card-content">
+
+
+                                            <!-- Login Tab -->
+
+                                              <div id="login">
+                                                  <div class="row">
+
+
+                                                      <form class="col s12" action="/login" method="post">
+                                                          <div class="row">
+                                                              <div class="col s12">
+                                                                  <div class="input-field inline">
+                                                                      <input name="loginEmail" type="text" class="validate" required autocomplete="off">
+                                                                      <label for="loginEmail">Email</label>
+                                                                  </div>
+                                                                  @fmail.com
+                                                              </div>
+                                                          </div>
+
+                                                          <div class="row">
+                                                            <div class="input-field col s12">
+                                                              <input name="loginPassword" type="password" class="validate" required autocomplete="off">
+                                                              <label for="password">Password</label>
+                                                            </div>
+                                                          </div>
+
+                                                          <button class="btn waves-effect red darken-3 waves-light" type="submit" name="login">Login</button>
+
+                                                      </form>
+
+
+                                                  </div>
+                                              </div> <!-- Login Tab End -->
+
+
+                                              <!-- Sign up Tab -->
+
+                                            <div id="signUp">
+                                              <div class="row">
+
+                                                <!-- Sign Up form -->
+                                                <form class="col s12" action="/signUp" method="post">
+
+                                                  <!-- Name Row -->
+
+                                                    <div class="row">
+
+                                                        <div class="input-field col s6">
+                                                          <input name="firstName" type="text" class="validate" autocomplete="off" required>
+                                                          <label for="firstName">First Name</label>
+                                                        </div>
+
+                                                        <div class="input-field col s6">
+                                                          <input name="lastName" type="text" class="validate" autocomplete="off" required>
+                                                          <label for="lastName">Last Name</label>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Email Row -->
+
+                                                      <div class="row">
+                                                          <div class="col s12">
+                                                            <div class="input-field inline">
+                                                              <input name="signUpEmail" id="signUpEmail" type="text" class="validate" onfocus="checkAvailability()" onblur="killChecker()" autocomplete="off" required>
+                                                              <label for="signUpEmail">Email</label>
+                                                            </div>
+                                                            @fmail.com<br>
+                                                              <span id="message" class="red-text"> </span>
+                                                          </div>
+                                                      </div>
+
+                                                      <!-- Password Row -->
+
+                                                      <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input name="signUpPassword" type="password" class="validate" autocomplete="off" required>
+                                                          <label for="signUpPassword">Password</label>
+                                                        </div>
+                                                      </div>
+
+                                                      <!-- Password Confirmation -->
+
+                                                      <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input name="signUpRePassword" type="password" class="validate" autocomplete="off" required>
+                                                          <label for="signUpRePassword">Re-Password</label>
+                                                        </div>
+                                                      </div>
+
+                                                      <!-- Gender Selection -->
+
+                                                      <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <select name="gender" required>
+                                                            <option value="" selected disabled>Gender</option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                            <option value="Other">Other</option>
+                                                          </select>
+                                                        </div>
+                                                      </div>
+
+                                                      <!-- Date of birth Row -->
+
+                                                      <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input type="text" class="datepicker" name="dateOfBirth" autocomplete="off" required>
+                                                          <label for="dateOfBirth">Date of Birth</label>
+                                                        </div>
+                                                      </div>
+
+                                                      <!-- Phone Number Row -->
+
+                                                        <div class="row">
+                                                          <div class="input-field col s12">
+                                                            <input name="phoneNumber" type="number" class="validate" autocomplete="off" required>
+                                                            <label for="phoneNumber">Phone Number</label>
+                                                          </div>
+                                                        </div>
+
+                                                  <button class="btn waves-effect red darken-3 waves-light" type="submit" name="action" id="signUpBtn">Sign Up</button>
+
+                                                </form>
+
+                                              </div> <!-- Row End -->
+                                            </div> <!-- Sign up tab end -->
+
+                                  </div> <!-- End of card content -->
+                              </div> <!-- End of Card -->
+
+                        </div> <!-- End of Card Div -->
+
+        </div> <!-- End of Row -->
+      </div> <!-- End of container -->
+
+  <% include layouts/footer.ejs %>
+
+
